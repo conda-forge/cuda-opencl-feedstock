@@ -1,7 +1,7 @@
 {% set name = "cuda-opencl" %}
-{% set version = "12.0.76" %}
+{% set version = "12.1.105" %}
 {% set lib_version = "1.0.0" %}
-{% set cuda_version = "12.0" %}
+{% set cuda_version = "12.1" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "windows-x86_64" %}  # [win]
 {% set target_name = "x86_64-linux" %}  # [linux64]
@@ -15,8 +15,8 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/cuda_opencl/{{ platform }}/cuda_opencl-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: 285b646a231d1101d7ffb7b37ca081f2c170114102ebfd0439fe189dbdc07b37  # [linux64]
-  sha256: 9a8688abf527dd1105e2f366e5aa84f901975a3ba94d977088764c45586370d3  # [win]
+  sha256: 9dbd1f857c93f8785baa0a001def26e56176a4c9550d642dc8f4963791588acc  # [linux64]
+  sha256: f74b45e80e149640edc03ebd6b069848cdde14aa2bea7b72847f9637c2709ba8  # [win]
 
 build:
   number: 0
@@ -70,6 +70,9 @@ outputs:
       - Library\include                             # [win]
       - Library\lib                                 # [win]
     requirements:
+      build:
+        - {{ compiler("c") }}
+        - {{ compiler("cxx") }}
       host:
         - cuda-version {{ cuda_version }}
       run:
@@ -104,4 +107,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - adibbley
+    - conda-forge/cuda

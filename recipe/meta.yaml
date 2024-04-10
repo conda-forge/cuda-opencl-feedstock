@@ -19,7 +19,7 @@ source:
   sha256: 4b5be4ad11ded8c33e83f757435a6c3fa5ff309339b13e18da9f520fb349bf3b  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [osx or aarch64 or ppc64le]
 
 test:

@@ -1,7 +1,7 @@
 {% set name = "cuda-opencl" %}
-{% set version = "12.6.77" %}
+{% set version = "12.8.55" %}
 {% set lib_version = "1.0.0" %}
-{% set cuda_version = "12.6" %}
+{% set cuda_version = "12.8" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "windows-x86_64" %}  # [win]
 {% set target_name = "x86_64-linux" %}  # [linux64]
@@ -15,8 +15,8 @@ package:
 
 source:
   url: https://developer.download.nvidia.com/compute/cuda/redist/cuda_opencl/{{ platform }}/cuda_opencl-{{ platform }}-{{ version }}-archive.{{ extension }}
-  sha256: aaf8aedb89ad5e4a63ccf564a6ec1073ac17863a7ae2a211a5d8127b3e1d09f4  # [linux64]
-  sha256: dc4555a8920f02d2142d266a8516b26cda7cc2609a20adedb8b268c2c4660971  # [win]
+  sha256: 7389890bad60c61ee11be766f3a15839f8c7fb089981204e32a4c49ef0a3b57b  # [linux64]
+  sha256: 1a29e32ca0bc82ef165a6bab1751169497fc6b3cddc70d15de9781fa66ab9faa  # [win]
 
 build:
   number: 0

@@ -29,3 +29,5 @@ done
 
 mkdir -p "${PREFIX}/etc/OpenCL/vendors"
 echo "${PREFIX}/${targetsDir}/lib/libOpenCL.so" > "${PREFIX}/etc/OpenCL/vendors/cuda.icd"
+
+check-glibc "$PREFIX"/lib*/*.so.* "$PREFIX"/bin/* "$PREFIX"/targets/*/lib*/*.so.* "$PREFIX"/targets/*/bin/*

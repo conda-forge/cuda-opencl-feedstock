@@ -1,6 +1,7 @@
 if not exist %PREFIX% mkdir %PREFIX%
+if not exist %LIBRARY_LIB%\x64 mkdir %LIBRARY_LIB%\x64
 
-move lib\x64\* %LIBRARY_LIB%
+move lib\x64\* %LIBRARY_LIB%\x64
 if not exist %LIBRARY_INC%\CL mkdir %LIBRARY_INC%\CL
 move include\CL\* %LIBRARY_INC%\CL
 

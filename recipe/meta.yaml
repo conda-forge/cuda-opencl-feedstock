@@ -1,5 +1,5 @@
 {% set name = "cuda-opencl" %}
-{% set version = "13.4.49" %}
+{% set version = "13.4.92" %}
 {% set lib_version = "1.0.0" %}
 {% set cuda_version = "13.4" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
@@ -10,9 +10,9 @@
 {% set target_name = "arm64" %}  # [win and arm64]
 {% set extension = "tar.xz" %}  # [not win]
 {% set extension = "zip" %}  # [win]
-{% set sha256 = "c88bc1f7cb698a68965baa5828be842466cae0924df9cf9b4fde45f6cfce65e3" %}  # [linux64]
-{% set sha256 = "fbef11739c6ccfced4b4476b2f0ef54e124c418cb0d7b80c4a2992b10d9d727c" %}  # [win64]
-{% set sha256 = "f89036851a4d33529d4e5504f4dc3945c827205054c1522b9a75322b73e2bfa6" %}  # [win and arm64]
+{% set sha256 = "568810f278003703fd6a8a211c44e53b3298f3ea9cf4a4e9320f868cf39ebdf5" %}  # [linux64]
+{% set sha256 = "455021668d64d929b9b11d8e604b19aef2158ef0328187145deea9d2fe5c1a17" %}  # [win64]
+{% set sha256 = "0f5a5a359ade7c9cda396107c943deaa8a2f80a59c89c02fa6f21fb87b2ece75" %}  # [win and arm64]
 
 package:
   name: {{ name|lower }}-split
@@ -23,7 +23,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [osx or aarch64 or ppc64le]
 
 requirements:

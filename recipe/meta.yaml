@@ -1,7 +1,7 @@
 {% set name = "cuda-opencl" %}
-{% set version = "13.4.92" %}
+{% set version = "13.5.25" %}
 {% set lib_version = "1.0.0" %}
-{% set cuda_version = "13.4" %}
+{% set cuda_version = "13.5" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "windows-x86_64" %}  # [win64]
 {% set platform = "windows-arm64" %}  # [win and arm64]
@@ -10,9 +10,9 @@
 {% set target_name = "arm64" %}  # [win and arm64]
 {% set extension = "tar.xz" %}  # [not win]
 {% set extension = "zip" %}  # [win]
-{% set sha256 = "568810f278003703fd6a8a211c44e53b3298f3ea9cf4a4e9320f868cf39ebdf5" %}  # [linux64]
-{% set sha256 = "455021668d64d929b9b11d8e604b19aef2158ef0328187145deea9d2fe5c1a17" %}  # [win64]
-{% set sha256 = "0f5a5a359ade7c9cda396107c943deaa8a2f80a59c89c02fa6f21fb87b2ece75" %}  # [win and arm64]
+{% set sha256 = "151d2a2a1ea2a5d5e10083fcf513e760861c08ee35436d938c6d4b34bce3901d" %}  # [linux64]
+{% set sha256 = "93c2fb43a3e0e2ebbfe1333a68ed11b1ff48f380992ae33ee97f0322f1c882d5" %}  # [win64]
+{% set sha256 = "234a9ec1cd34c13089d55afcf7711276afc38f497a9c4bacf2d3154d601590cf" %}  # [win and arm64]
 
 package:
   name: {{ name|lower }}-split
